@@ -20,6 +20,8 @@ After you add the API Key, it should look like like the following. Notice the ap
 
 var url = 'http://api.openweathermap.org/data/2.5/weather?appid=PASTE_API_KEY_HERE&q=' + encodedLocation + '&units=imperial';
 
+http://api.openweathermap.org/data/2.5/weather?appid=9e68a0b2ebf54fac8c4ac127281e612f&q=PortoAlegre&units=metric
+
 It's a shame they made this change, but after following those two steps, everything will work as expected!
 
 - Andrew
