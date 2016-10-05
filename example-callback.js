@@ -9,6 +9,8 @@ request({
   if (error) {
     console.log('Unable to fetch weather');
   } else {
-    console.log(JSON.stringify(body, null, 4));
+    // console.log(JSON.stringify(body, null, 4));
+    var data = body;
+    console.log("It's " + data.main.temp + " in " + data.name + "!");
   }
 });
