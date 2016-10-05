@@ -6,9 +6,10 @@ module.exports = function (callback) {
     url: url,
     json: true
   }, function(error, response, body){
-    var currentWeather;
+    var errmsg, currentWeather;
     if (error) {
-      console.log('Unable to fetch weather');
+      errmsg = 'Unable to fetch weather';
+      callback(errmsg);
     } else {
       // console.log(JSON.stringify(body, null, 4));
       var data = body;
