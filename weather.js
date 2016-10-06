@@ -4,6 +4,11 @@ var url = 'http://api.openweathermap.org/data/2.5/weather?appid=9e68a0b2ebf54fac
 module.exports = function (location, callback) {
   // move url into here
   encodedURIComponent();
+
+  if (!location) {
+    return callback("No location provided");
+  }
+
   request({
     url: url,
     json: true
