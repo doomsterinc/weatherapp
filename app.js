@@ -3,19 +3,14 @@ var location = require('./location');
 
 //setup yargs o have --location or -l argument
 var argv = require('yargs')
-	.command('create', 'Create a new account', function (yargs) {
-		yargs.options({
-			location: {
-				demand: true,
-				alias: 'l',
-				description: 'Account name (eg: Twitter, Facebook)',
-				type: 'string'
-			}
-		}).help('help');
-	})
-	.help('help')
-	.argv;
-console.log(argv.location);
+	.options('location', {
+    alias: 'l',
+    demand: false,
+    describe: 'Location to fetch weather for',
+    type: 'string'
+  })
+  .help('help')
+  .argv;
 
 // weather(function(currentWeather){
 //   console.log(currentWeather);
@@ -35,3 +30,18 @@ console.log(argv.location);
 //else
 //  call location
 //      call weather(location, callback)
+if (typeof argv.l === 'string') {
+  weather(argv.l, function(currentWeather){
+    console.log(currentWeather);
+  })
+} else {
+  location(function(location){
+    if (!location) {
+      console.log("Unable to guess location!");
+      return;
+    }
+    weather(location.city, function(currentWeather){
+      console.log(currentWeather);
+    });
+  })
+}
