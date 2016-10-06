@@ -30,18 +30,21 @@ var argv = require('yargs')
 //else
 //  call location
 //      call weather(location, callback)
-if (typeof argv.l === 'string') {
+if (typeof argv.l === 'string' && argv.l.length > 0 ) {
+  console.log('Has location!');
   weather(argv.l, function(currentWeather){
     console.log(currentWeather);
   })
 } else {
+  console.log('No location given!');
   location(function(location){
-    if (!location) {
+    if (location) {
+      weather(location.city, function(currentWeather){
+        console.log(currentWeather);
+      });
+    } else {
       console.log("Unable to guess location!");
-      return;
     }
-    weather(location.city, function(currentWeather){
-      console.log(currentWeather);
-    });
+
   })
 }

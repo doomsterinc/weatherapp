@@ -3,7 +3,8 @@ var request = require('request');
 
 module.exports = function (location, callback) {
   // move url into here
-  var url = 'http://api.openweathermap.org/data/2.5/weather?appid=9e68a0b2ebf54fac8c4ac127281e612f&q=' + encodedURIComponent(location) + '&units=metric';
+  var encodLocation = encodeURIComponent(location);
+  var url = 'http://api.openweathermap.org/data/2.5/weather?appid=9e68a0b2ebf54fac8c4ac127281e612f&q=' + encodLocation + '&units=metric';
   if (!location) {
     return callback("No location provided");
   }
