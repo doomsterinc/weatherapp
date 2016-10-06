@@ -26,6 +26,5 @@ if (typeof argv.l === 'string' && argv.l.length > 0 ) {
     } else {
       console.log("Unable to guess location!");
     }
-
-  })
+  });
 }
