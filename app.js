@@ -6,5 +6,6 @@ weather(function(currentWeather){
 });
 
 location(function(location) {
-  console.log("city" + location.city);
+  console.log("city: " + location.city);
+  console.log("lag/log: " + location.loc);
 });
