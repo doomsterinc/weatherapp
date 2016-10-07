@@ -1,4 +1,5 @@
-function doWork(data) {
-  callback(data);
-  callback(data);
+function doWork(data, callback) {
+  callback(done);
 }
+
+function doWorkPromisse(){}
