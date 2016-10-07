@@ -5,7 +5,7 @@ function doWork(data, callback) {
 function doWorkPromise(data){
   return new Promise(function(resolve, reject){
     setTimeout(function(){
-      resolve('everything work');
+      reject('everything is broken');
     },1000);
     // reject({
     //   error: "something bad happened"
@@ -15,4 +15,6 @@ function doWorkPromise(data){
 
 doWorkPromise('some Data').then(function(data){
   console.log(data);
-})
+}, function(error){
+  console.log(error);
+});
