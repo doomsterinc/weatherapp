@@ -3,8 +3,10 @@ function doWork(data, callback) {
 }
 
 function doWorkPromise(data){
-  return new Promisse(function(resolve, reject){
-    resolve('everything work');
+  return new Promise(function(resolve, reject){
+    setTimeout(function(){
+      resolve('everything work');
+    },1000);
     // reject({
     //   error: "something bad happened"
     // });
