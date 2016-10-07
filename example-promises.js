@@ -1,4 +1,4 @@
 function doWork(data) {
-  callback();
-  callback();
+  callback(data);
+  callback(data);
 }
