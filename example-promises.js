@@ -5,8 +5,12 @@ function doWork(data, callback) {
 function doWorkPromisse(data){
   return new Promisse(function(resolve, reject){
     resolve('everything work');
-    reject({
-      error: "something bad happened"
-    });
+    // reject({
+    //   error: "something bad happened"
+    // });
   });
 }
+
+doWorkPromise('some Data').then(function(data){
+  console.log(data);
+})
