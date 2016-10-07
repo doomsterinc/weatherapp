@@ -18,3 +18,14 @@
 // }, function(error){
 //   console.log(error);
 // });
+
+function getWeather(location){
+  //return Promise
+    //
+}
+
+getWeather('new york').then(function(currentweather){
+  console.log(currentweather);
+}, function(error){
+  console.log(error);
+})
