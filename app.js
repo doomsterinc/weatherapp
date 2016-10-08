@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var weather = require('./weather');
 var location = require('./location');
 
