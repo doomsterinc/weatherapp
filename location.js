@@ -8,7 +8,7 @@ module.exports = function () {
       json: true
     }, function(error, response, body){
       if (error) {
-        reject();
+        reject("Unable to guess location!");
       } else {
         resolve(body);
       }
