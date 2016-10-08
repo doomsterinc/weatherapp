@@ -1,6 +1,6 @@
 # weatherin
 
-[![Release Status]](https://github.com/doomsterinc/weatherin/releases)
+[Release Status](https://github.com/doomsterinc/weatherin/releases)
 
 > Get weather in your location
 
