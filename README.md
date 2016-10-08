@@ -17,4 +17,4 @@ $ weatherin -l Bage
 
 ## License
 
-[MIT](https://github.com/) &copy; Maicon Giovani (Doomster)
+[MIT](https://github.com/doomsterinc/licenses/blob/master/MIT-LICENSE.md) &copy; Maicon Giovani (Doomster)
